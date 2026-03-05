@@ -12,10 +12,10 @@ public class CentroFP {
     public CentroFP(int maxAlumnos) {
         if (maxAlumnos <= 20 &&  maxAlumnos > 0) {
             this.MAX_ALUMNOS = maxAlumnos;
-            alumnos = new Alumno[MAX_ALUMNOS];
+            alumnos = new Alumno[this.MAX_ALUMNOS];
         } else {
             this.MAX_ALUMNOS = 20;
-            alumnos = new Alumno[MAX_ALUMNOS];
+            alumnos = new Alumno[this.MAX_ALUMNOS];
         }
     }
 
@@ -79,7 +79,7 @@ public class CentroFP {
     /**
      * Muestra todos los alumnos registrados con sus atributos
      */
-    public void mostrarAlumnos(){
+    public String mostrarAlumnos(){
         StringBuilder sb = new StringBuilder("Lista de alumnos:\n");
 
         for (int i = 0; i < MAX_ALUMNOS; i++) {
@@ -89,7 +89,7 @@ public class CentroFP {
             }
         }
 
-        System.out.println(sb.toString());
+        return sb.toString();
     }
 
     /**
