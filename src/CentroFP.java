@@ -71,4 +71,20 @@ public class CentroFP {
 
         return alumnoRegistrado;
     }
+
+    /**
+     * Muestra todos los alumnos registrados con sus atributos
+     */
+    public void mostrarAlumnos(){
+        StringBuilder sb = new StringBuilder("Lista de alumnos:\n");
+
+        for (int i = 0; i < MAX_ALUMNOS; i++) {
+            if (alumnos[i] != null){
+                sb.append(alumnos[i].toString());
+                sb.append("\n");
+            }
+        }
+
+        System.out.println(sb.toString());
+    }
 }
