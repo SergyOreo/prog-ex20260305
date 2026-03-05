@@ -12,11 +12,11 @@ public class CentroFP {
     public CentroFP(int maxAlumnos) {
         if (maxAlumnos <= 20 &&  maxAlumnos > 0) {
             this.MAX_ALUMNOS = maxAlumnos;
-            alumnos = new Alumno[this.MAX_ALUMNOS];
         } else {
             this.MAX_ALUMNOS = 20;
-            alumnos = new Alumno[this.MAX_ALUMNOS];
         }
+
+        alumnos = new Alumno[this.MAX_ALUMNOS];
     }
 
     /**
