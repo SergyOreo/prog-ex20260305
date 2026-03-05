@@ -10,9 +10,13 @@ public class CentroFP {
      * @param maxAlumnos cantidad máxima de alumnos
      */
     public CentroFP(int maxAlumnos) {
-        this.MAX_ALUMNOS = maxAlumnos;
-
-        alumnos = new Alumno[MAX_ALUMNOS];
+        if (maxAlumnos <= 20 &&  maxAlumnos > 0) {
+            this.MAX_ALUMNOS = maxAlumnos;
+            alumnos = new Alumno[MAX_ALUMNOS];
+        } else {
+            this.MAX_ALUMNOS = 20;
+            alumnos = new Alumno[MAX_ALUMNOS];
+        }
     }
 
     /**
